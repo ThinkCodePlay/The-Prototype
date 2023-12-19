@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://brytjxypwck4l"]
+
+[ext_resource type="Script" path="res://components/onetime_animated_effect.gd" id="1_k6r82"]
+[ext_resource type="Texture2D" uid="uid://hjx0a5l7dvwe" path="res://assets/Images/Space Shooter/explosion.png" id="1_kevpw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rxoh3"]
+atlas = ExtResource("1_kevpw")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q37oh"]
+atlas = ExtResource("1_kevpw")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yir1o"]
+atlas = ExtResource("1_kevpw")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_02eja"]
+atlas = ExtResource("1_kevpw")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74pje"]
+atlas = ExtResource("1_kevpw")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xnt1g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rxoh3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q37oh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yir1o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_02eja")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74pje")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="ExplotionEffect" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_xnt1g")
+autoplay = "default"
+frame = 4
+frame_progress = 1.0
+script = ExtResource("1_k6r82")

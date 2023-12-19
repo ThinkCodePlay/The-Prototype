@@ -1,0 +1,80 @@
+[gd_scene load_steps=6 format=3 uid="uid://d1dab2u2xeqgk"]
+
+[ext_resource type="Script" path="res://UI/game_over.gd" id="1_6gfid"]
+[ext_resource type="PackedScene" uid="uid://dw8xj4d3rtaub" path="res://effects/space_background.tscn" id="1_hdbi4"]
+[ext_resource type="LabelSettings" uid="uid://cgosc4au35lag" path="res://assets/fonts/title_label_settings.tres" id="2_hj18u"]
+[ext_resource type="Resource" uid="uid://b6beto0s6ja6q" path="res://game_stats.tres" id="2_tkhox"]
+[ext_resource type="LabelSettings" uid="uid://dukmeccsgqbt5" path="res://assets/fonts/default_label_settings.tres" id="2_wrsro"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_6gfid")
+game_stats = ExtResource("2_tkhox")
+
+[node name="SpaceBackground" parent="." instance=ExtResource("1_hdbi4")]
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="GameOverLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Game Over
+"
+label_settings = ExtResource("2_hj18u")
+horizontal_alignment = 1
+
+[node name="ScoreBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ScoreLabel" type="Label" parent="CenterContainer/VBoxContainer/ScoreBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Score"
+label_settings = ExtResource("2_wrsro")
+
+[node name="ScoreValue" type="Label" parent="CenterContainer/VBoxContainer/ScoreBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+label_settings = ExtResource("2_wrsro")
+
+[node name="HighscoreHBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HighscoreLabel" type="Label" parent="CenterContainer/VBoxContainer/HighscoreHBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Highscore
+"
+label_settings = ExtResource("2_wrsro")
+
+[node name="HighscoreValue" type="Label" parent="CenterContainer/VBoxContainer/HighscoreHBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+label_settings = ExtResource("2_wrsro")
+
+[node name="Space" type="Control" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+
+[node name="MenuLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Press 'Space' To Return To Menu"
+label_settings = ExtResource("2_wrsro")
+horizontal_alignment = 1
