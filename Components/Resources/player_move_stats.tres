@@ -1,7 +1,8 @@
 [gd_resource type="Resource" script_class="MoveStats" load_steps=2 format=3 uid="uid://btaowkq2d1i6f"]
 
-[ext_resource type="Script" path="res://Resources/move_stats.gd" id="1_n2g8l"]
+[ext_resource type="Script" path="res://Components/Resources/move_stats.gd" id="1_n2g8l"]
 
 [resource]
 script = ExtResource("1_n2g8l")
 speed = 100
+rotation_speed = 10.0

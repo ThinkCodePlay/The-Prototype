@@ -1,0 +1,75 @@
+[gd_scene load_steps=8 format=3 uid="uid://c8wi2jalunhny"]
+
+[ext_resource type="Script" path="res://Examples/Animation/laser/laser.gd" id="1_u8lc4"]
+[ext_resource type="Texture2D" uid="uid://dn53orv08o3mv" path="res://assets/Images/laser/glowing_circle.png" id="2_2h88h"]
+[ext_resource type="Texture2D" uid="uid://dh1slq3xyp0yb" path="res://Examples/Animation/laser/fade_out_alpha_curve.tres" id="2_vjd6g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t6j6r"]
+size = Vector2(15, 112)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_paigx"]
+particle_flag_disable_z = true
+initial_velocity_min = 120.0
+initial_velocity_max = 120.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.1
+scale_max = 0.2
+alpha_curve = ExtResource("2_vjd6g")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_liduw"]
+particle_flag_disable_z = true
+initial_velocity_min = 250.0
+initial_velocity_max = 250.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.1
+scale_max = 0.3
+alpha_curve = ExtResource("2_vjd6g")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vs5eu"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+gravity = Vector3(0, 98, 0)
+radial_accel_min = 100.0
+radial_accel_max = 100.0
+tangential_accel_min = 100.0
+tangential_accel_max = 100.0
+scale_min = 0.1
+scale_max = 0.2
+alpha_curve = ExtResource("2_vjd6g")
+
+[node name="Laser" type="RayCast2D"]
+position = Vector2(13, 88)
+target_position = Vector2(160, 0)
+script = ExtResource("1_u8lc4")
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(-0.5, -4.17233e-07)
+scale = Vector2(0.95, 0.8)
+points = PackedVector2Array(0, 0, 100, 0)
+width = 3.0
+default_color = Color(0.603922, 0.92549, 0.988235, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(131, 8)
+shape = SubResource("RectangleShape2D_t6j6r")
+
+[node name="CastingParticles" type="GPUParticles2D" parent="."]
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_paigx")
+texture = ExtResource("2_2h88h")
+lifetime = 0.3
+
+[node name="CollisionParticles2" type="GPUParticles2D" parent="."]
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_liduw")
+texture = ExtResource("2_2h88h")
+lifetime = 0.3
+
+[node name="BeamParticle2D" type="GPUParticles2D" parent="."]
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_vs5eu")
+texture = ExtResource("2_2h88h")
+lifetime = 0.3
