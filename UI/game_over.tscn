@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://UI/game_over.gd" id="1_6gfid"]
 [ext_resource type="PackedScene" uid="uid://dw8xj4d3rtaub" path="res://effects/space_background.tscn" id="1_hdbi4"]
 [ext_resource type="LabelSettings" uid="uid://cgosc4au35lag" path="res://assets/fonts/title_label_settings.tres" id="2_hj18u"]
-[ext_resource type="Resource" uid="uid://b6beto0s6ja6q" path="res://game_stats.tres" id="2_tkhox"]
+[ext_resource type="Resource" uid="uid://btaowkq2d1i6f" path="res://Components/Resources/player_move_stats.tres" id="2_tkhox"]
 [ext_resource type="LabelSettings" uid="uid://dukmeccsgqbt5" path="res://assets/fonts/default_label_settings.tres" id="2_wrsro"]
 
 [node name="GameOver" type="Control"]

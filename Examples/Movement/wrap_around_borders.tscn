@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4clx5vv4o88n"]
+
+[ext_resource type="Texture2D" uid="uid://cqi214gu7jplm" path="res://assets/Images/Space Shooter/ship.png" id="1_fwaap"]
+[ext_resource type="Script" path="res://Components/Movement/space_ship_movement_component.gd" id="2_fu6b1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_72oy8"]
+
+[node name="SpaceMovement" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_72oy8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_fwaap")
+region_enabled = true
+region_rect = Rect2(16, 1, 16, 14)
+
+[node name="SpaceShipMovementComponent" type="Node" parent="." node_paths=PackedStringArray("actor")]
+script = ExtResource("2_fu6b1")
+actor = NodePath("..")

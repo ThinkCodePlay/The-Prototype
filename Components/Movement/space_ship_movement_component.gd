@@ -2,10 +2,10 @@
 class_name SpaceShipMovementComponent
 extends Node
 
-@export var actor: Node2D
+@export var actor: CharacterBody2D
 @export var acceleration: float = 10.0
 @export var max_speed: float = 100.0
-@export var rotation_speed: float = 200.0
+@export var rotation_speed: float = 100.0
 @export var slow_down_speed: float = 1
 
 func _physics_process(delta):
