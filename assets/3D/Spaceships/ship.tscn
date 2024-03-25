@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cwmwlga3fnc6n"]
 
-[ext_resource type="PackedScene" uid="uid://epa4l45putvm" path="res://assets/3D/ship-0.glb" id="1_5jsd6"]
-[ext_resource type="Script" path="res://assets/3D/ship.gd" id="2_ff3sj"]
+[ext_resource type="PackedScene" uid="uid://dam25negcd76a" path="res://assets/3D/Spaceships/ship-0.glb" id="1_5jsd6"]
+[ext_resource type="Script" path="res://assets/3D/Spaceships/ship.gd" id="2_ff3sj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vixk4"]
 size = Vector3(10.2232, 22.7773, 4.84101)

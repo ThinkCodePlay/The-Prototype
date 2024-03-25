@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c4clx5vv4o88n"]
+[gd_scene load_steps=4 format=3 uid="uid://bj1w1dyn7hoqw"]
 
 [ext_resource type="Texture2D" uid="uid://cqi214gu7jplm" path="res://assets/Images/Space Shooter/ship.png" id="1_hv7su"]
 [ext_resource type="Script" path="res://Components/Movement/space_ship_movement_component.gd" id="2_iwlti"]
@@ -18,4 +18,3 @@ region_rect = Rect2(16, 1, 16, 14)
 [node name="SpaceShipMovementComponent" type="Node" parent="." node_paths=PackedStringArray("actor")]
 script = ExtResource("2_iwlti")
 actor = NodePath("..")
-
