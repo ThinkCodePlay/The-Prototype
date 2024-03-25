@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dw8xj4d3rtaub"]
 
 [ext_resource type="Texture2D" uid="uid://ccxbwwfxephc2" path="res://assets/Images/Space Shooter/space.png" id="1_qaoaq"]
-[ext_resource type="Script" path="res://effects/space_background.gd" id="1_ukq0c"]
+[ext_resource type="Script" path="res://assets/Background/space_background.gd" id="1_ukq0c"]
 [ext_resource type="Texture2D" uid="uid://cdt6wsfmpvy2r" path="res://assets/Images/Space Shooter/far_stars.png" id="2_uovla"]
 [ext_resource type="Texture2D" uid="uid://r2lhxn8xrn3a" path="res://assets/Images/Space Shooter/close_stars.png" id="3_ohqvp"]
 

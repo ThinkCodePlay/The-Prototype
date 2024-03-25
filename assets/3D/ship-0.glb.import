@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://epa4l45putvm"
+uid="uid://dam25negcd76a"
 path="res://.godot/imported/ship-0.glb-d6919eba7983bbc32447469884b18fff.scn"
 
 [deps]
@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/ship-0.glb-d6919eba7983bbc32447469884b18fff.s
 
 [params]
 
-nodes/root_type="CharacterBody3D"
+nodes/root_type=""
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0

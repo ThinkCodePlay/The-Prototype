@@ -18,3 +18,4 @@ region_rect = Rect2(16, 1, 16, 14)
 [node name="SpaceShipMovementComponent" type="Node" parent="." node_paths=PackedStringArray("actor")]
 script = ExtResource("2_iwlti")
 actor = NodePath("..")
+
