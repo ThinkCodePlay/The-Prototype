@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://dypdpsoon7j7v"]
+
+[ext_resource type="Texture2D" uid="uid://cqi214gu7jplm" path="res://assets/Images/Space Shooter/ship.png" id="1_jcohr"]
+[ext_resource type="Script" path="res://Components/Movement/move_component.gd" id="2_47f85"]
+[ext_resource type="Script" path="res://Components/Movement/move_input_component.gd" id="3_y3krt"]
+[ext_resource type="Resource" uid="uid://btaowkq2d1i6f" path="res://Components/Resources/player_move_stats.tres" id="4_6apyw"]
+[ext_resource type="Script" path="res://Components/Movement/position_clamp_component.gd" id="5_8mea6"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(80, 100)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_jcohr")
+region_enabled = true
+region_rect = Rect2(16, 0, 16, 16)
+
+[node name="MoveComponent" type="Node" parent="." node_paths=PackedStringArray("actor")]
+script = ExtResource("2_47f85")
+actor = NodePath("..")
+
+[node name="MoveInputComponent" type="Node" parent="." node_paths=PackedStringArray("move_component")]
+script = ExtResource("3_y3krt")
+move_stats = ExtResource("4_6apyw")
+move_component = NodePath("../MoveComponent")
+
+[node name="PositionClampComponent" type="Node2D" parent="." node_paths=PackedStringArray("actor")]
+script = ExtResource("5_8mea6")
+actor = NodePath("..")

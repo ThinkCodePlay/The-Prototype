@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://dth7y4dfbrtn1"]
+
+[ext_resource type="PackedScene" uid="uid://cwmwlga3fnc6n" path="res://assets/3D/ship.tscn" id="1_lrmty"]
+[ext_resource type="Texture2D" uid="uid://bo1824unga30x" path="res://assets/3D/panorama_image.png" id="2_vuy4v"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ywuyf"]
+panorama = ExtResource("2_vuy4v")
+
+[sub_resource type="Sky" id="Sky_pebh5"]
+sky_material = SubResource("PanoramaSkyMaterial_ywuyf")
+
+[sub_resource type="Environment" id="Environment_sglwb"]
+background_mode = 2
+sky = SubResource("Sky_pebh5")
+
+[node name="3dShipMovement" type="Node3D"]
+
+[node name="Ship" parent="." instance=ExtResource("1_lrmty")]
+max_speed = null
+acceleration = null
+pitch_speed = null
+roll_speed = null
+yaw_speed = null
+input_response = null
+
+[node name="Camera3D" type="Camera3D" parent="Ship"]
+transform = Transform3D(1, 0, 0, 0, 0.442038, -0.896996, 0, 0.896996, 0.442038, 0, -56.6383, 30.6722)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_sglwb")

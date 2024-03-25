@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://noj16n7ntpsi"]
 
-[ext_resource type="PackedScene" uid="uid://bfi5t0xfcm3e2" path="res://Examples/Movement/left_right_user_movement.tscn" id="1_4vt20"]
+[ext_resource type="PackedScene" uid="uid://bfi5t0xfcm3e2" path="res://Examples/2D/Movement/left_right_user_movement.tscn" id="1_4vt20"]
 
 [node name="Welcome" type="Node2D"]
 
